@@ -1,0 +1,210 @@
+<div class="card bg-dark-gray text-black-50">
+    <div class="card-header">{{ titulo }}</div>
+    <div class="card-body">
+
+        <form (ngSubmit)="create()">
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.razonSocial" name="razonSocial" placeholder="Razón Social" id="razonSocial">
+                    <label for="razonSocial" class="col-form-label">Ejemplo: FIXACAR</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.nombComercial" name="nombComercial" placeholder="Nombre Comercial" id="nombComercial">
+                    <label for="nombComercial" class="col-form-label">Ejemplo: Fixacar Market</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.matriculaTributaria" name="matriculaTributaria" placeholder="Matricula Tributaria" id="matriculaTributaria">
+                    <label for="matriculaTributaria" class="col-form-label">Ejemplo: 12345678-9</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.telefono" name="telefono" placeholder="+57" id="telefono">
+                    <label for="telefono" class="col-form-label">Ejemplo: +57 150384712</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.direccion" name="direccion" placeholder="Dirección de correspondencia" id="direccion">
+                    <label for="direccion" class="col-form-label">Ejemplo: Calle 66 N° 56-23, Chapinero</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.correo" name="correo" placeholder="Correo electronico corporativo" id="correo">
+                    <label for="correo" class="col-form-label">Ejemplo: juan@fixacar.com</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <select class="form-control custom-select" [(ngModel)]="proveedor.pais" name="pais" placeholder="Pais" id="pais">
+                      <option value="Colombia" selected>Colombia</option>
+                      <option value="Chile">Chile</option>
+                      <option value="Panama">Panama</option>
+                      <option value="Argentina">Argentina</option>
+                    </select>
+                    <label for="pais" class="col-form-label">Pais</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <select class="form-control custom-select" [(ngModel)]="proveedor.region" name="region" placeholder="Regional" id="region">
+                    <option value="Centro" selected>Centro</option>
+                    <option value="Occidente">Occidente</option>
+                    <option value="Sur">Sur</option>
+                    <option value="Norte">Norte</option>
+                  </select>
+                    <label for="region" class="col-form-label">Regional</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <select class="form-control custom-select" [(ngModel)]="proveedor.ciudad" name="ciudad" placeholder="Ciudad" id="ciudad">
+                    <option value="Bogota" selected>Bogota</option>
+                    <option value="Medellin">Medellin</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Cartagena</option>
+                  </select>
+                    <label for="ciudad" class="col-form-label">Ciudad</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.paginaWeb" name="paginaWeb" placeholder="Web Corporativa" id="paginaWeb">
+                    <label for="paginaWeb" class="col-form-label">Ejemplo: https://www.mitienda.com</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.codigoPostal" name="codigoPostal" placeholder="Codigo Postal" id="codigoPostal">
+                    <label for="codigoPostal" class="col-form-label">Ejemplo: 110111</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.fechaInicio" name="fechaInicio" placeholder="Fecha de Inicio" id="fechaInicio">
+                    <label for="fechaInicio" class="col-form-label">Fecha de Inicio</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.fechaFin" name="fechaFin" placeholder="Fecha Final" id="fechaFin">
+                    <label for="fechaFin" class="col-form-label">Fecha Final</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.descNegociado" name="descNegociado" placeholder="Descripción de Negociado" id="descNegociado">
+                    <label for="descNegociado" class="col-form-label">Descripción de Negociado</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.intermediacion" name="intermediacion" placeholder="Intermediación" id="intermediacion">
+                    <label for="intermediacion" class="col-form-label">Intermediación</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.sesionAdicional" name="sesionAdicional" placeholder="Sesión Adicional" id="sesionAdicional">
+                    <label for="sesionAdicional" class="col-form-label">Sesión Adicional</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.numContrato" name="numContrato" placeholder="Número de Contrato" id="numContrato">
+                    <label for="numContrato" class="col-form-label">Número de Contrato</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.termPago" name="termPago" placeholder="Termino de Pago" id="termPago">
+                    <label for="termPago" class="col-form-label">Termino de Pago</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.clasifTaller" name="clasifTaller" placeholder="Clasificación Taller" id="clasifTaller">
+                    <label for="clasifTaller" class="col-form-label">Clasificación Taller</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.actEconomica" name="actEconomica" placeholder="Actividad Economica" id="actEconomica">
+                    <label for="actEconomica" class="col-form-label">Actividad Economica</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <h5>Estado</h5>
+                    <div class="custom-control custom-control-inline custon-radio">
+                        <input type="radio" name="estado" id="estado1" class="custom-control-input">
+                        <label for="estado1" class="custom-control-label">Activo</label>
+                    </div>
+
+                    <div class="custom-control custom-control-inline custon-radio">
+                        <input type="radio" name="estado" id="estado2" class="custom-control-input">
+                        <label for="estado2" class="custom-control-label">Inactivo</label>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.redAuto" name="redAuto" placeholder="Red Auto" id="redAuto">
+                    <label for="redAuto" class="col-form-label">Red Auto</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.inscSubocol" name="inscSubocol" placeholder="Inscripción Subocol" id="inscSubocol">
+                    <label for="inscSubocol" class="col-form-label">Inscripción Subocol</label>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.idProvidType" name="idProvidType" placeholder="Tipo de Proveedor" id="idProvidType">
+                    <label for="idProvidType" class="col-form-label">Tipo de Proveedor</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="proveedor.idTiempoResp" name="idTiempoResp" placeholder="Tiempo de Respuesta" id="idTiempoResp">
+                    <label for="idTiempoResp" class="col-form-label">Tiempo de Respuesta</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary" role="button">Crear Proveedor</button>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+</div>
